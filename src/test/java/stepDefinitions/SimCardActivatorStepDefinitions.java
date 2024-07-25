@@ -30,6 +30,11 @@ public class SimCardActivatorStepDefinitions {
         simCard = new SimCard("1255789453849037777", "horatio.yakima@groovemail.com", false);
     }
 
+    @Given("a broken sim card")
+    public void aBrokenSimCard() {
+        simCard = new SimCard("8944500102198304826", "notorious.criminal@gonepostal.com", false);
+    }
+
     @When("a request to activate the sim card is submitted")
     public void aRequestToActivateSimCard() {
         this.restTemplate.postForObject("http://localhost:8080/activate", simCard, String.class);
