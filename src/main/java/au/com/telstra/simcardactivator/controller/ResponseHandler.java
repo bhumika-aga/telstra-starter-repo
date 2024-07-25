@@ -4,8 +4,8 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import au.com.telstra.simcardactivator.entity.ActuationResult;
-import au.com.telstra.simcardactivator.entity.SimCard;
+import au.com.telstra.simcardactivator.model.ActuationResult;
+import au.com.telstra.simcardactivator.model.SimCard;
 
 @Component
 public class ResponseHandler {
