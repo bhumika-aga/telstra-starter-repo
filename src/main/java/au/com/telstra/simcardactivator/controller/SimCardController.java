@@ -19,13 +19,13 @@ public class SimCardController {
         this.responseHandler = responseHandler;
     }
 
-    @PostMapping("/activate")
+    @PostMapping(value = "/activate")
     public void handleActivationRequest(@RequestBody SimCard simCard) {
         var actuationResult = responseHandler.actuate(simCard);
         databaseConduit.save(simCard, actuationResult);
     }
 
-    @GetMapping("/query")
+    @GetMapping(value = "/query")
     public SimCard handleActivationRequest(@RequestParam Long simCardId) {
         return databaseConduit.querySimCard(simCardId);
     }
